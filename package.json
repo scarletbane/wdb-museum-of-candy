@@ -12,11 +12,10 @@
     "author": "",
     "license": "ISC",
     "devDependencies": {
-        "eslint-config-prettier": "^8.6.0",
-        "eslint-plugin-prettier": "^4.2.1",
+        "eslint": "^8.34.0",
         "pnpm": "^7.27.0",
-        "prettier": "^2.8.4",
         "stylelint": "^15.1.0",
+        "stylelint-config-standard": "^30.0.1",
         "vite": "^4.1.1",
         "vite-plugin-eslint": "^1.8.1",
         "vite-plugin-purgecss": "^0.2.12",

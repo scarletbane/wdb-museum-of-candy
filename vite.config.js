@@ -14,5 +14,9 @@ export default defineConfig({
         hot: true,
         open: true,
     },
-    plugins: [htmlPurge(), stylelint(), eslint()],
+    plugins: [
+        htmlPurge(),
+        stylelint(),
+        eslint()
+    ],
 });
