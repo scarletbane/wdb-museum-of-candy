@@ -17,5 +17,3 @@ addEventListener('scroll', () => {
         mainNavbar.classList.remove('scrolled');
     }
 });
-
-
