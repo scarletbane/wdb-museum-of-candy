@@ -1,5 +1,7 @@
 :root {
+    --clr-primary-light: #f498b8;
     --clr-primary: #ea1c2c;
+    --clr-secondary: rgb(222 192 222);
     --clr-light: #fff;
 }
 
@@ -8,12 +10,41 @@ body {
     font-family: Nunito, sans-serif;
 }
 
+.scrolled {
+    background-color: var(--clr-secondary);
+}
+
 #main-navbar {
     font-size: 1.5rem;
     font-weight: 100;
+    transition: background-color 0.2s ease-in-out;
 }
 
 #main-navbar .navbar-brand {
+    color: var(--clr-primary);
+}
+
+.navbar-toggler {
+    text-decoration: none;
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active {
+    outline: none;
+    box-shadow: none;
+}
+
+.bi-list {
+    font-size: 2rem;
+    color: var(--clr-light);
+}
+
+.bi-list:focus,
+.bi-list:hover,
+.bi-list:active {
     color: var(--clr-primary);
 }
 
@@ -33,6 +64,15 @@ body {
 
 #heading-group span {
     color: var(--clr-primary);
+}
+
+.section-title {
+    font-weight: 100;
+    color: var(--clr-primary);
+}
+
+section p {
+    color: var(--clr-primary-light);
 }
 
 @media (max-width: 1250px) {
