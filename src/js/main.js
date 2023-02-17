@@ -1,3 +1,5 @@
+import '../styles/main.scss';
+
 const mainNavbar = document.querySelector('#main-navbar');
 
 let windowScrolled = false;

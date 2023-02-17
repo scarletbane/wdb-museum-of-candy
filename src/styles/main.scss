@@ -18,10 +18,20 @@ body {
     font-size: 1.5rem;
     font-weight: 100;
     transition: background-color 0.2s ease-in-out;
-}
 
-#main-navbar .navbar-brand {
-    color: var(--clr-primary);
+    .navbar-brand {
+        color: var(--clr-primary);
+    }
+
+    .nav-link {
+        color: var(--clr-light);
+        transition: color 0.2s ease-in-out;
+
+        &:hover,
+        &:focus {
+            color: var(--clr-primary);
+        }
+    }
 }
 
 .navbar-toggler {
@@ -29,41 +39,34 @@ body {
     outline: none;
     border: none;
     box-shadow: none;
-}
 
-.navbar-toggler:focus,
-.navbar-toggler:active {
-    outline: none;
-    box-shadow: none;
+    &:focus,
+    &:active {
+        outline: none;
+        box-shadow: none;
+    }
 }
 
 .bi-list {
     font-size: 2rem;
     color: var(--clr-light);
+
+    &:focus,
+    &:hover,
+    &:active {
+        color: var(--clr-primary);
+    }
 }
 
-.bi-list:focus,
-.bi-list:hover,
-.bi-list:active {
-    color: var(--clr-primary);
-}
+#heading-group {
+    h1 {
+        font-size: 3.5rem;
+        font-weight: 100;
+    }
 
-#main-navbar .nav-link {
-    color: var(--clr-light);
-}
-
-#main-navbar .nav-link:hover,
-#main-navbar .nav-link:focus {
-    color: var(--clr-primary);
-}
-
-#heading-group h1 {
-    font-size: 3.5rem;
-    font-weight: 100;
-}
-
-#heading-group span {
-    color: var(--clr-primary);
+    span {
+        color: var(--clr-primary);
+    }
 }
 
 .section-title {
@@ -72,19 +75,25 @@ body {
     color: var(--clr-primary);
 }
 
-section p {
-    color: var(--clr-primary-light);
+section {
+    p {
+        color: var(--clr-primary-light);
+    }
 }
 
 @media (max-width: 1250px) {
-    #heading-group h1 {
-        font-size: 3rem;
+    #heading-group {
+        h1 {
+            font-size: 3rem;
+        }
     }
 }
 
 @media (max-width: 1100px) {
-    #heading-group h1 {
-        font-size: 2.5rem;
+    #heading-group {
+        h1 {
+            font-size: 2.5rem;
+        }
     }
 
     .section-title {

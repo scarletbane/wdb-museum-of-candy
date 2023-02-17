@@ -3,8 +3,9 @@ lockfileVersion: 5.4
 specifiers:
   eslint: ^8.34.0
   pnpm: ^7.27.0
+  sass: ^1.58.2
   stylelint: ^15.1.0
-  stylelint-config-standard: ^30.0.1
+  stylelint-config-standard-scss: ^7.0.1
   vite: ^4.1.1
   vite-plugin-eslint: ^1.8.1
   vite-plugin-purgecss: ^0.2.12
@@ -13,11 +14,12 @@ specifiers:
 devDependencies:
   eslint: 8.34.0
   pnpm: 7.27.0
+  sass: 1.58.2
   stylelint: 15.1.0
-  stylelint-config-standard: 30.0.1_stylelint@15.1.0
-  vite: 4.1.1
+  stylelint-config-standard-scss: 7.0.1_6kmz6pqyyc6yqevihcpt7hoegq
+  vite: 4.1.1_sass@1.58.2
   vite-plugin-eslint: 1.8.1_eslint@8.34.0+vite@4.1.1
-  vite-plugin-purgecss: 0.2.12_postcss@8.4.21
+  vite-plugin-purgecss: 0.2.12_postcss@8.4.21+sass@1.58.2
   vite-plugin-stylelint: 4.2.0_gmulkhpbu4jrt2bk2yjxotogzq
 
 packages:
@@ -1523,6 +1525,10 @@ packages:
     engines: {node: '>= 4'}
     dev: true
 
+  /immutable/4.2.4:
+    resolution: {integrity: sha512-WDxL3Hheb1JkRN3sQkyujNlL/xRjAo3rJtaU5xeufUauG66JdMr32bLj4gF+vWl84DIA3Zxw7tiAjneYzRRw+w==}
+    dev: true
+
   /import-fresh/3.3.0:
     resolution: {integrity: sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw==}
     engines: {node: '>=6'}
@@ -1715,6 +1721,10 @@ packages:
 
   /lodash.truncate/4.4.2:
     resolution: {integrity: sha512-jttmRe7bRse52OsWIMDLaXxWqRAmtIUccAQ3garviCqJjafXOfNMO0yMfNpdD6zbGaTU0P5Nz7e7gAT6cKmJRw==}
+    dev: true
+
+  /lodash/4.17.21:
+    resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
     dev: true
 
   /lru-cache/6.0.0:
@@ -2013,6 +2023,15 @@ packages:
       postcss: 8.4.21
     dev: true
 
+  /postcss-scss/4.0.6_postcss@8.4.21:
+    resolution: {integrity: sha512-rLDPhJY4z/i4nVFZ27j9GqLxj1pwxE80eAzUNRMXtcpipFYIeowerzBgG3yJhMtObGEXidtIgbUpQ3eLDsf5OQ==}
+    engines: {node: '>=12.0'}
+    peerDependencies:
+      postcss: ^8.4.19
+    dependencies:
+      postcss: 8.4.21
+    dev: true
+
   /postcss-selector-parser/6.0.11:
     resolution: {integrity: sha512-zbARubNdogI9j7WY4nQJBiNqQf3sLS3wCP4WfOidu+p28LofJqDH1tcXypGrcmMHhDk2t9wGhCsYe/+szLTy1g==}
     engines: {node: '>=4'}
@@ -2160,6 +2179,16 @@ packages:
       queue-microtask: 1.2.3
     dev: true
 
+  /sass/1.58.2:
+    resolution: {integrity: sha512-2mbyOWOv/lhEXD6nVrQZQ4KT2DlwcODbTskM42EyqBAFUWOhiiYtAXZqjZz1ygzapYf+N+2GwfIH9M5FM4GUMg==}
+    engines: {node: '>=12.0.0'}
+    hasBin: true
+    dependencies:
+      chokidar: 3.5.3
+      immutable: 4.2.4
+      source-map-js: 1.0.2
+    dev: true
+
   /semver/5.7.1:
     resolution: {integrity: sha512-sauaDf/PZdVgrLTNYHRtpXa1iRiKcaebiKQ1BJdpQlWH2lCvexQdX55snPFyK7QzpudqbCI0qXFfOasHdyNDGQ==}
     hasBin: true
@@ -2274,12 +2303,43 @@ packages:
     resolution: {integrity: sha512-Dj1Okke1C3uKKwQcetra4jSuk0DqbzbYtXipzFlFMZtowbF1x7BKJwB9AayVMyFARvU8EDrZdcax4At/452cAg==}
     dev: true
 
+  /stylelint-config-recommended-scss/9.0.1_6kmz6pqyyc6yqevihcpt7hoegq:
+    resolution: {integrity: sha512-qAmz/TdrqslwiMTuLM3QXeISUkfEDUXGMfRBCHm/xrkCJNnQefv+mzG2mWTsWkqcVk8HAyUkug10dwAcYp2fCQ==}
+    peerDependencies:
+      postcss: ^8.3.3
+      stylelint: ^15.0.0
+    peerDependenciesMeta:
+      postcss:
+        optional: true
+    dependencies:
+      postcss: 8.4.21
+      postcss-scss: 4.0.6_postcss@8.4.21
+      stylelint: 15.1.0
+      stylelint-config-recommended: 10.0.1_stylelint@15.1.0
+      stylelint-scss: 4.4.0_stylelint@15.1.0
+    dev: true
+
   /stylelint-config-recommended/10.0.1_stylelint@15.1.0:
     resolution: {integrity: sha512-TQ4xQ48tW4QSlODcti7pgSRqBZcUaBzuh0jPpfiMhwJKBPkqzTIAU+IrSWL/7BgXlOM90DjB7YaNgFpx8QWhuA==}
     peerDependencies:
       stylelint: ^15.0.0
     dependencies:
       stylelint: 15.1.0
+    dev: true
+
+  /stylelint-config-standard-scss/7.0.1_6kmz6pqyyc6yqevihcpt7hoegq:
+    resolution: {integrity: sha512-m5sRdtsB1F5fnC1Ozla7ryftU47wVpO+HWd+JQTqeoG0g/oPh5EfbWfcVHbNCEtuoHfALIySiUWS20pz2hX6jA==}
+    peerDependencies:
+      postcss: ^8.3.3
+      stylelint: ^15.0.0
+    peerDependenciesMeta:
+      postcss:
+        optional: true
+    dependencies:
+      postcss: 8.4.21
+      stylelint: 15.1.0
+      stylelint-config-recommended-scss: 9.0.1_6kmz6pqyyc6yqevihcpt7hoegq
+      stylelint-config-standard: 30.0.1_stylelint@15.1.0
     dev: true
 
   /stylelint-config-standard/30.0.1_stylelint@15.1.0:
@@ -2289,6 +2349,19 @@ packages:
     dependencies:
       stylelint: 15.1.0
       stylelint-config-recommended: 10.0.1_stylelint@15.1.0
+    dev: true
+
+  /stylelint-scss/4.4.0_stylelint@15.1.0:
+    resolution: {integrity: sha512-Qy66a+/30aylFhPmUArHhVsHOun1qrO93LGT15uzLuLjWS7hKDfpFm34mYo1ndR4MCo8W4bEZM1+AlJRJORaaw==}
+    peerDependencies:
+      stylelint: ^14.5.1 || ^15.0.0
+    dependencies:
+      lodash: 4.17.21
+      postcss-media-query-parser: 0.2.3
+      postcss-resolve-nested-selector: 0.1.1
+      postcss-selector-parser: 6.0.11
+      postcss-value-parser: 4.2.0
+      stylelint: 15.1.0
     dev: true
 
   /stylelint/15.1.0:
@@ -2535,15 +2608,15 @@ packages:
       '@types/eslint': 8.21.1
       eslint: 8.34.0
       rollup: 2.77.3
-      vite: 4.1.1
+      vite: 4.1.1_sass@1.58.2
     dev: true
 
-  /vite-plugin-purgecss/0.2.12_postcss@8.4.21:
+  /vite-plugin-purgecss/0.2.12_postcss@8.4.21+sass@1.58.2:
     resolution: {integrity: sha512-QV3ULnIB0+7djn05Xkg3bnN4bbxGAGGG0KnaIHgcfl1/+WdyUGhQOggcFhKqB6oalTJnU7m41118l27emm/Yzw==}
     dependencies:
       purgecss: 4.1.3
       tsup: 6.6.3_postcss@8.4.21
-      vite: 2.9.15
+      vite: 2.9.15_sass@1.58.2
     transitivePeerDependencies:
       - '@swc/core'
       - less
@@ -2576,10 +2649,10 @@ packages:
       chokidar: 3.5.3
       postcss: 8.4.21
       stylelint: 15.1.0
-      vite: 4.1.1
+      vite: 4.1.1_sass@1.58.2
     dev: true
 
-  /vite/2.9.15:
+  /vite/2.9.15_sass@1.58.2:
     resolution: {integrity: sha512-fzMt2jK4vQ3yK56te3Kqpkaeq9DkcZfBbzHwYpobasvgYmP2SoAr6Aic05CsB4CzCZbsDv4sujX3pkEGhLabVQ==}
     engines: {node: '>=12.2.0'}
     hasBin: true
@@ -2599,11 +2672,12 @@ packages:
       postcss: 8.4.21
       resolve: 1.22.1
       rollup: 2.77.3
+      sass: 1.58.2
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
 
-  /vite/4.1.1:
+  /vite/4.1.1_sass@1.58.2:
     resolution: {integrity: sha512-LM9WWea8vsxhr782r9ntg+bhSFS06FJgCvvB0+8hf8UWtvaiDagKYWXndjfX6kGl74keHJUcpzrQliDXZlF5yg==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -2632,6 +2706,7 @@ packages:
       postcss: 8.4.21
       resolve: 1.22.1
       rollup: 3.15.0
+      sass: 1.58.2
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
