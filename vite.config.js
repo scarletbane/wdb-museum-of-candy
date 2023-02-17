@@ -4,7 +4,6 @@ import htmlPurge from 'vite-plugin-purgecss';
 import stylelint from 'vite-plugin-stylelint';
 
 export default defineConfig({
-    base: 'https://wdb-museumofcandy.netlify.app/',
     root: 'src',
     build: {
         minify: 'esbuild',
