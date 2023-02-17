@@ -10,29 +10,11 @@
         "sourceType": "module"
     },
     "rules": {
-        "array-bracket-newline": [
-            "error",
-            "always"
-        ],
-        "array-element-newline": [
-            "error",
-            "always"
-        ],
-        "indent": [
-            "error",
-            4
-        ],
-        "linebreak-style": [
-            "error",
-            "unix"
-        ],
-        "quotes": [
-            "error",
-            "single"
-        ],
-        "semi": [
-            "error",
-            "always"
-        ]
+        "array-bracket-newline": ["error", "always"],
+        "array-element-newline": ["error", "always"],
+        "indent": ["error", 4],
+        "linebreak-style": ["error", "unix"],
+        "quotes": ["error", "single"],
+        "semi": ["error", "always"]
     }
 }
