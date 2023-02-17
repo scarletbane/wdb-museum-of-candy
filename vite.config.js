@@ -16,7 +16,9 @@ export default defineConfig({
     },
     plugins: [
         htmlPurge(),
-        stylelint(),
+        stylelint({
+            cache: false
+        }),
         eslint()
     ],
 });
