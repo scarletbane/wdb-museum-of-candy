@@ -13,7 +13,7 @@
     "license": "ISC",
     "devDependencies": {
         "eslint": "^8.34.0",
-        "pnpm": "^7.27.0",
+        "pnpm": "^7.33.4",
         "prettier": "^2.8.4",
         "sass": "^1.58.2",
         "stylelint": "^15.1.0",
